@@ -45,16 +45,15 @@ const Calendar = () => {
 		let startDate = startOfWeek(currentDate);
 		for (let i = 0; i < 7; i++) {
 			days.push(
-				<div className='flex-1 text-center' key={i}>
+				<div
+					className='w-1/7 text-center border-r border-teal-400 last:border-gray-800'
+					key={i}
+				>
 					{format(addDays(startDate, i), dateFormat)}
 				</div>
 			);
 		}
-		return (
-			<div className='flex items-stretch justify-around bg-gray-800 text-white'>
-				{days}
-			</div>
-		);
+		return <div className='flex bg-gray-800 text-white'>{days}</div>;
 	};
 
 	const cells = () => {
