@@ -8,7 +8,6 @@ import {
 	endOfWeek,
 	isSameMonth,
 	isSameDay,
-	parse,
 	addMonths,
 	subMonths
 } from "date-fns";
@@ -16,39 +15,48 @@ import "./Calendar.css";
 const Calendar = () => {
 	const [currentDate, setCurrentDate] = useState(new Date());
 	const [selectedDate, setSelectedDate] = useState(new Date());
+
 	const header = () => {
 		const dateFormat = "MMMM yyyy";
 		return (
-			<div className='header row flex-middle'>
-				<div className='column col-start'>
-					<div className='icon' onClick={prevMonth}>
-						chevron_left
-					</div>
+			<div className='flex justify-around items-center my-4 mx-4'>
+				<div
+					className='text-gray-800 font-bold icon cursor-pointer'
+					onClick={prevMonth}
+				>
+					chevron_left
 				</div>
-				<div className='column col-center'>
+				<div className='text-gray-800 font-bold '>
 					<span>{format(currentDate, dateFormat)}</span>
 				</div>
-				<div className='column col-end'>
-					<div className='icon' onClick={nextMonth}>
-						chevron_right
-					</div>
+				<div
+					className='text-gray-800 font-bold icon cursor-pointer'
+					onClick={nextMonth}
+				>
+					chevron_right
 				</div>
 			</div>
 		);
 	};
+
 	const days = () => {
 		const dateFormat = "iii";
 		const days = [];
 		let startDate = startOfWeek(currentDate);
 		for (let i = 0; i < 7; i++) {
 			days.push(
-				<div className='column col-center' key={i}>
+				<div className='flex-1 text-center' key={i}>
 					{format(addDays(startDate, i), dateFormat)}
 				</div>
 			);
 		}
-		return <div className='days row'>{days}</div>;
+		return (
+			<div className='flex items-stretch justify-around bg-gray-800 text-white'>
+				{days}
+			</div>
+		);
 	};
+
 	const cells = () => {
 		const monthStart = startOfMonth(currentDate);
 		const monthEnd = endOfMonth(monthStart);
@@ -91,12 +99,15 @@ const Calendar = () => {
 		}
 		return <div className='body'>{rows}</div>;
 	};
+
 	const nextMonth = () => {
 		setCurrentDate(addMonths(currentDate, 1));
 	};
+
 	const prevMonth = () => {
 		setCurrentDate(subMonths(currentDate, 1));
 	};
+
 	const onDateClick = (day: any) => {
 		setSelectedDate(day);
 	};

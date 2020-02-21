@@ -1,40 +1,47 @@
 {
-  "name": "react-calender-hooks",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
-    "date-fns": "^2.9.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.4.0",
-    "typescript": "~3.7.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"name": "react-calender-hooks",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@fullhuman/postcss-purgecss": "^2.0.6",
+		"@testing-library/jest-dom": "^4.2.4",
+		"@testing-library/react": "^9.3.2",
+		"@testing-library/user-event": "^7.1.2",
+		"@types/jest": "^24.0.0",
+		"@types/node": "^12.0.0",
+		"@types/react": "^16.9.0",
+		"@types/react-dom": "^16.9.0",
+		"autoprefixer": "^9.7.4",
+		"concurrently": "^5.1.0",
+		"date-fns": "^2.9.0",
+		"postcss-cli": "^7.1.0",
+		"react": "^16.12.0",
+		"react-dom": "^16.12.0",
+		"react-scripts": "3.4.0",
+		"tailwindcss": "^1.2.0",
+		"typescript": "~3.7.2"
+	},
+	"scripts": {
+		"start": "concurrently \"npm run watch:tw-css\" \"react-scripts start\"",
+		"build": "npm run build:tw-css && react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"build:tw-css": "postcss src/styles/tailwind.css -o src/styles/index.css",
+		"watch:tw-css": "postcss src/styles/tailwind.css -o src/styles/index.css -w"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
 }
