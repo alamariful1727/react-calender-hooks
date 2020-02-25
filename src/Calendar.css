@@ -27,13 +27,6 @@ body {
 	line-height: 1.5;
 	position: relative;
 }
-header {
-	display: block;
-	width: 100%;
-	padding: 1.75em 0;
-	border-bottom: 1px solid lightgray;
-	background: white;
-}
 /* GRID */
 .row {
 	margin: 0;
@@ -53,44 +46,8 @@ header {
 }
 /* Calendar */
 .calendar {
-	display: block;
-	position: relative;
-	width: 90%;
-	background: white;
-	border: 1px solid lightgray;
-	height: auto;
-	margin: 0 auto;
 }
-.calendar .header {
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 115%;
-	padding: 1.5em 0;
-	border-bottom: 1px solid lightgray;
-}
-.calendar .header .icon {
-	cursor: pointer;
-	transition: 0.15s ease-out;
-}
-.calendar .header .icon:hover {
-	transform: scale(1.75);
-	transition: 0.25s ease-out;
-	color: dodgerblue;
-}
-.calendar .header .icon:first-of-type {
-	margin-left: 1em;
-}
-.calendar .header .icon:last-of-type {
-	margin-right: 1em;
-}
-.calendar .days {
-	text-transform: uppercase;
-	font-weight: 400;
-	color: gray;
-	font-size: 70%;
-	padding: 0.75em 0;
-	border-bottom: 1px solid lightgray;
-}
+
 .calendar .body .cell {
 	position: relative;
 	height: 6em;

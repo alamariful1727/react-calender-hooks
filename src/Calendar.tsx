@@ -111,7 +111,7 @@ const Calendar = () => {
 		setSelectedDate(day);
 	};
 	return (
-		<div className='calendar'>
+		<div className='calendar h-auto w-11/12 mx-auto border border-gray-800'>
 			<div>{header()}</div>
 			<div>{days()}</div>
 			<div>{cells()}</div>
