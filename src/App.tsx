@@ -4,10 +4,12 @@ import "./styles/index.css";
 function App() {
 	return (
 		<>
-			<div className='my-3 text-lg font-extrabold text-gray-800 text-center'>
+			<div className='my-3 text-lg font-extrabold text-teal-700 text-center'>
 				React Calender
 			</div>
-			<Calendar />
+			<div className='flex justify-center items-center'>
+				<Calendar />
+			</div>
 		</>
 	);
 }

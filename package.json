@@ -22,7 +22,8 @@
 		"typescript": "~3.7.2"
 	},
 	"scripts": {
-		"start": "concurrently \"npm run watch:tw-css\" \"react-scripts start\"",
+		"dev": "concurrently \"npm run watch:tw-css\" \"react-scripts start\"",
+		"start": "react-scripts start",
 		"build": "npm run build:tw-css && react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
