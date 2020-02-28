@@ -72,9 +72,9 @@ const Calendar = () => {
 				const cloneDay = day;
 				days.push(
 					<div
-						className={`column cell ${
+						className={`w-1/7 cell relative h-24 cursor-pointer bg-gray-700 hover:bg-gray-900 border-r border-gray-500 last:border-r-0 transition duration-500 ease-in-out ${
 							!isSameMonth(day, monthStart)
-								? "disabled"
+								? "disabled pointer-events-none"
 								: isSameDay(day, selectedDate)
 								? "selected"
 								: ""
@@ -89,14 +89,17 @@ const Calendar = () => {
 				day = addDays(day, 1);
 			}
 			rows.push(
-				<div className='row' key={day.toDateString()}>
+				<div
+					className='flex border-b border-gray-500 last:border-b-0'
+					key={day.toDateString()}
+				>
 					{" "}
 					{days}{" "}
 				</div>
 			);
 			days = [];
 		}
-		return <div className='body'>{rows}</div>;
+		return rows;
 	};
 
 	const nextMonth = () => {
@@ -111,7 +114,7 @@ const Calendar = () => {
 		setSelectedDate(day);
 	};
 	return (
-		<div className='calendar h-auto w-11/12 mx-auto border border-gray-800'>
+		<div className='w-full px-4'>
 			<div>{header()}</div>
 			<div>{days()}</div>
 			<div>{cells()}</div>
