@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 700);
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 .icon {
 	font-family: "Material Icons", serif;
@@ -15,50 +14,4 @@
 	text-rendering: optimizeLegibility;
 	-moz-osx-font-smoothing: grayscale;
 	font-feature-settings: "liga";
-}
-* {
-	box-sizing: border-box;
-}
-
-.selected {
-	border-left: 10px solid transparent;
-	border-image: linear-gradient(45deg, #1affa0 0%, #cff153 40%);
-	border-image-slice: 1;
-}
-.cell {
-	height: 1.5rem;
-}
-.cell .number {
-	position: absolute;
-	color: white;
-	font-size: 82.5%;
-	line-height: 1;
-	top: 0.75em;
-	right: 0.75em;
-	font-weight: 700;
-}
-.cell:hover .number,
-.selected .number {
-	visibility: hidden;
-}
-.disabled .number {
-	color: black;
-}
-
-.cell .bg {
-	font-weight: 700;
-	line-height: 1;
-	color: #1affa0;
-	opacity: 0;
-	font-size: 5em;
-	position: absolute;
-	top: -0.2em;
-	right: -0.05em;
-	transition: 0.25s ease-out;
-	letter-spacing: -0.07em;
-}
-.cell:hover .bg,
-.selected .bg {
-	opacity: 0.2;
-	transition: 0.5s ease-in;
 }
