@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-calender-hooks/static/css/main.b5943499.chunk.css",
+    "main.js": "/react-calender-hooks/static/js/main.1fcb3b48.chunk.js",
+    "main.js.map": "/react-calender-hooks/static/js/main.1fcb3b48.chunk.js.map",
+    "runtime-main.js": "/react-calender-hooks/static/js/runtime-main.bf0cc25d.js",
+    "runtime-main.js.map": "/react-calender-hooks/static/js/runtime-main.bf0cc25d.js.map",
+    "static/js/2.c3c9a31e.chunk.js": "/react-calender-hooks/static/js/2.c3c9a31e.chunk.js",
+    "static/js/2.c3c9a31e.chunk.js.map": "/react-calender-hooks/static/js/2.c3c9a31e.chunk.js.map",
+    "index.html": "/react-calender-hooks/index.html",
+    "precache-manifest.6e59e51deea68349594c0f8e5e4d49dc.js": "/react-calender-hooks/precache-manifest.6e59e51deea68349594c0f8e5e4d49dc.js",
+    "service-worker.js": "/react-calender-hooks/service-worker.js",
+    "static/css/main.b5943499.chunk.css.map": "/react-calender-hooks/static/css/main.b5943499.chunk.css.map",
+    "static/js/2.c3c9a31e.chunk.js.LICENSE.txt": "/react-calender-hooks/static/js/2.c3c9a31e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bf0cc25d.js",
+    "static/js/2.c3c9a31e.chunk.js",
+    "static/css/main.b5943499.chunk.css",
+    "static/js/main.1fcb3b48.chunk.js"
+  ]
+}
